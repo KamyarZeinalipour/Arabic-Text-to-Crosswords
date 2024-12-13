@@ -67,8 +67,8 @@ Both the model and the dataset are publicly available, encouraging community eng
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/arabic-crossword-clue-generator.git
-   cd arabic-crossword-clue-generator
+   git clone https://github.com/yourusername/Arabic-Text-to-Crosswords.git
+   cd Arabic-Text-to-Crosswords
    ```
 
 2. **Set Up Virtual Environment (Optional but Recommended):**
@@ -276,7 +276,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgements
 
-- **Model and Dataset:** Thanks to [Kamyar Zeinalipour](https://huggingface.co/Kamyar-zeinalipour) for providing the Llama3-8B-Ar-Text-to-Cross model.
+
 - **Libraries:** This project utilizes the following libraries:
   - [Transformers](https://github.com/huggingface/transformers)
   - [PyTorch](https://pytorch.org/)
