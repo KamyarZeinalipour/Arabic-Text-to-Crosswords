@@ -45,7 +45,8 @@ By focusing on educational applications, this generator addresses the need for a
 ## Model and Dataset
 
 - **Model:** [Kamyar-zeinalipour/Llama3-8B-Ar-Text-to-Cross](https://huggingface.co/Kamyar-zeinalipour/Llama3-8B-Ar-Text-to-Cross)
-- **Dataset:** **Arabic-Clue-Instruct** with over 50,000 entries, including text, answers, clues, and categories.
+- **Dataset:** [Arabic-Clue-Instruct](https://huggingface.co/datasets/Kamyar-zeinalipour/Arabic-Clue-Instruct) with over 50,000 entries, including text, answers, clues, and categories.
+
 
 Both the model and the dataset are publicly available, encouraging community engagement and contributions to the project's growth.
 
