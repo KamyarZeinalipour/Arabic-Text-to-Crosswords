@@ -256,37 +256,7 @@ The script consists of several functions designed to process input data, interac
    Writes the processed data, including the generated clues, to an output CSV file.
    
 ## Annotations
-
-### Command Syntax
-```bash
-python educw_annotation.py --examples_batch_folder <path-to-csv-file>.csv --annotator_name <Annotator Name>
-```
-
-### Parameters
-- `--examples_batch_folder`: Path to the input CSV file
-- `--annotator_name`: Name of the annotator (for tracking purposes)
-
-## Input File Requirements
-
-Your input CSV must contain the following mandatory columns:
-- `extract`: The text to be annotated
-- `category`: Classification or type of text
-- `clue`: Contextual information or hints
-- `answer`: Keywords or specific answer related to the text
-
-## Output
-
-### Directory Structure
-- A new `annotations` folder will be created in the main directory
-- Annotated files will be saved as `annotations_{file_name}.csv`
-
-### Annotated Files Location
-- Original annotated files are stored in the `Annotated` folder
-
-## Example Command
-```bash
-python educw_annotation.py --examples_batch_folder educational_samples.csv --annotator_name "Research Team"
-```
+- For information about Annotations and Annotation Codes get back to this Repository [Arabic Annotation](https://github.com/KamyarZeinalipour/HumanAnnotation-UI-Ar-Text-To-Cross/tree/main)
 
 ## Troubleshooting
 - Ensure the input CSV matches the required column structure
