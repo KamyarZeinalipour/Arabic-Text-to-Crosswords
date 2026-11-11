@@ -1,3 +1,4 @@
+import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import argparse
 import pandas as pd
@@ -5,7 +6,7 @@ import re
 
 # Define the prompt
 simple_prompt = (
-    'Create Arabic crossword clues for a specified keyword in Arabic, '
+    'Create crossword clues for a specified keyword in Arabic, '
     'using the provided text and focusing on the indicated category.'
 )
 
@@ -80,7 +81,7 @@ def main(args):
     # Load the model and tokenizer
     model_name = "Kamyar-zeinalipour/Llama3-8B-Ar-Text-to-Cross"
     print(f"Loading the model {model_name}...")
-    model = AutoModelForCausalLM.from_pretrained(model_name).cuda()
+    model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16).cuda()
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     print(f"Model {model_name} loaded successfully.")
 

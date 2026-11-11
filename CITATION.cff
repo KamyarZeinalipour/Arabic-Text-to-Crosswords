@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software or the Arabic-Clue-Instruct data, please cite the paper below."
+title: "From Arabic Text to Puzzles: LLM-Driven Development of Arabic Educational Crosswords"
+repository-code: "https://github.com/KamyarZeinalipour/Arabic-Text-to-Crosswords"
+license: MIT
+authors:
+  - {family-names: Zeinalipour, given-names: Kamyar}
+  - {family-names: Saad, given-names: Mohamed Zaky}
+  - {family-names: Maggini, given-names: Marco}
+  - {family-names: Gori, given-names: Marco}
+preferred-citation:
+  type: article
+  title: "From Arabic Text to Puzzles: LLM-Driven Development of Arabic Educational Crosswords"
+  authors:
+    - {family-names: Zeinalipour, given-names: Kamyar}
+    - {family-names: Saad, given-names: Mohamed Zaky}
+    - {family-names: Maggini, given-names: Marco}
+    - {family-names: Gori, given-names: Marco}
+  year: 2025
+  identifiers:
+    - {type: other, value: "arXiv:2501.11035"}
+  url: "https://arxiv.org/abs/2501.11035"
