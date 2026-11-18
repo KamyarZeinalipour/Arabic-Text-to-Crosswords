@@ -88,17 +88,18 @@ clues (`CLUE1: …`, `CLUE2: …`, `CLUE3: …`).
 4. **Evaluation.** Clues from the base and fine-tuned models were rated by Arabic-speaking experts
    (table above).
 
+
 <!-- hf-usage -->
 ## Load the models and data from Hugging Face
 
-Everything released with the paper is in the Hugging Face collection [Arabic Educational Crosswords](https://huggingface.co/collections/Kamyar-zeinalipour/arabic-educational-crosswords-6af46e6797758d5046eb4f39).
+Each paper has its own Hugging Face collection: [ArabIcros (ArabicNLP 2023)](https://huggingface.co/collections/Kamyar-zeinalipour/arabicros-arabicnlp-2023-6afe1e95936bfc4f0544e190), [From Arabic Text to Puzzles (2025)](https://huggingface.co/collections/Kamyar-zeinalipour/from-arabic-text-to-puzzles-2025-6af46e6797758d5046eb4f39).
 
 ```python
 from datasets import load_dataset
 
+data = load_dataset("Kamyar-zeinalipour/AR_CW")
 data = load_dataset("Kamyar-zeinalipour/Arabic-Clue-Instruct")
 data = load_dataset("Kamyar-zeinalipour/ar_clue_text_v2")
-data = load_dataset("Kamyar-zeinalipour/AR_CW")
 ```
 
 The fine-tuned models are LoRA adapters. `AutoPeftModelForCausalLM` downloads the base model named in the adapter's configuration and applies the adapter on top of it:
