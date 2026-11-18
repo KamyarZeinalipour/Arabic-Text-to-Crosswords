@@ -88,6 +88,39 @@ clues (`CLUE1: …`, `CLUE2: …`, `CLUE3: …`).
 4. **Evaluation.** Clues from the base and fine-tuned models were rated by Arabic-speaking experts
    (table above).
 
+<!-- hf-usage -->
+## Load the models and data from Hugging Face
+
+Everything released with the paper is in the Hugging Face collection [Arabic Educational Crosswords](https://huggingface.co/collections/Kamyar-zeinalipour/arabic-educational-crosswords-6af46e6797758d5046eb4f39).
+
+```python
+from datasets import load_dataset
+
+data = load_dataset("Kamyar-zeinalipour/Arabic-Clue-Instruct")
+data = load_dataset("Kamyar-zeinalipour/ar_clue_text_v2")
+data = load_dataset("Kamyar-zeinalipour/AR_CW")
+```
+
+The fine-tuned models are LoRA adapters. `AutoPeftModelForCausalLM` downloads the base model named in the adapter's configuration and applies the adapter on top of it:
+
+```python
+import torch
+from peft import AutoPeftModelForCausalLM
+from transformers import AutoTokenizer
+
+repo = "Kamyar-zeinalipour/Llama3-8B-Ar-Text-to-Cross"
+tokenizer = AutoTokenizer.from_pretrained("Kamyar-zeinalipour/Llama3-8B-Ar-Text-to-Cross")
+model = AutoPeftModelForCausalLM.from_pretrained(repo, torch_dtype=torch.bfloat16, device_map="auto")
+```
+
+| Adapter | Base model |
+|---|---|
+| [Llama3-8B-Ar-Text-to-Cross](https://huggingface.co/Kamyar-zeinalipour/Llama3-8B-Ar-Text-to-Cross) | [meta-llama/Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) |
+
+Some base models (Llama, Gemma, Mistral Small/Nemo) are gated: accept their licence on their Hugging Face page and log in with `huggingface-cli login` before loading.
+
+<!-- /hf-usage -->
+
 ## Citation
 
 ```bibtex
